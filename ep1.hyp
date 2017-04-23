@@ -1,0 +1,522 @@
+
+#S(causal_hypothesis :name "Ann/Lisa vs Sue" :type nil
+                     :sources ("Ann, Lisa, Jack, and Sue")
+                     :event_list (('t86
+                                   (plan (name go_in_group)
+                                         (planner (*var* 't15))
+                                         (object (*var* 't29))
+                                         (location (*var* 't32))))
+                                  ('t85
+                                   (plan (name do_after_event)
+                                         (planner (*var* 't15))
+                                         (object (*var* 't46))))
+                                  ('t84
+                                   (plan (name let_know) (planner (*var* 't15))
+                                         (to (*var* 't29))
+                                         (object (*var* 't71))))
+                                  ('t83
+                                   (plan (name force_into)
+                                         (planner (*var* 't15))
+                                         (object (*var* 't22))
+                                         (to (*var* 't16))))
+                                  ('t82
+                                   (goal (name abduct) (planner (*var* 't15))
+                                    (object (*var* 't22))
+                                    (co_planner (*var* 't29))))
+                                  ('t81
+                                   (do (actor 
+                                        (*var* 't29))))
+                                  ('t80
+                                   (do (actor 
+                                        (*var* 't22))))
+                                  ('t79
+                                   (ptrans (actor (*var* 't15))
+                                           (instrument (*var* 't16))
+                                           (cause (*var* 't15))
+                                           (to (*var* 't32))
+                                           (tense (*var* 't17))
+                                           (co_agent (*var* 't29))
+                                           (time (*var* 't33))))
+                                  ('t78
+                                   (attend (actor (*var* 't15))
+                                    (object (*var* 't15)) (tense (*var* 't17))
+                                    (co_agent (*var* 't29))
+                                    (time (*var* 't46))))
+                                  ('t77
+                                   (plan (name wait_for_event)
+                                         (planner (*var* 't15))
+                                         (act (*var* 't46))))
+                                  ('t76
+                                   (propel (actor (*var* 't29))
+                                           (cause (*var* 't29))
+                                           (object (*var* 't25))
+                                           (tense (*var* 't17))
+                                           (time (*var* 't30))))
+                                  ('t75
+                                   (mtrans (actor (*var* 't15))
+                                           (object (*var* 't71))
+                                           (to (*var* 't29))
+                                           (tense (*var* 't73))
+                                           (time (*var* 't74))))
+                                  ('t72
+                                   (plan (name ask_help) (planner (*var* 't15))
+                                         (object (*var* 't29))
+                                         (objective (*var* 't71))))
+                                  ('t70
+                                   (propel (actor (*var* 't22))
+                                           (cause (*var* 't22))
+                                           (object (*var* 't25))
+                                           (state (*var* 't26))
+                                           (tense (*var* 't17))
+                                           (time (*var* 't27))))
+                                  ('t69
+                                   (plan (name drive_away)
+                                         (planner (*var* 't15))
+                                         (object (*var* 't16))
+                                         (to (*var* 't18))))
+                                  ('t68
+                                   (propel (actor (*var* 't15))
+                                           (cause (*var* 't15))
+                                           (object (*var* 't22))
+                                           (tense (*var* 't17))
+                                           (to (*var* 't16))
+                                           (time (*var* 't23))))
+                                  ('t67
+                                   (plan (name attention)
+                                         (planner (*var* 't22))
+                                         (objective (*var* 't58))))
+                                  ('t66
+                                   (plan (name surprised)
+                                         (planner (*var* 't22))
+                                         (object (*var* 't58))))
+                                  ('t65
+                                   (plan (name know_event)
+                                         (planner (*var* 't41))
+                                         (objective (*var* 't58))))
+                                  ('t64
+                                   (speak (actor (*var* 't22))
+                                    (state (*var* 't62)) (tense (*var* 't17))
+                                    (time (*var* 't63))))
+                                  ('t61
+                                   (ptrans (actor (*var* 't15))
+                                           (cause (*var* 't15))
+                                           (object (*var* 't16))
+                                           (tense (*var* 't17))
+                                           (to (*var* 't18))
+                                           (time (*var* 't19))))
+                                  ('t60
+                                   (attend (actor (*var* 't41))
+                                    (object (*var* 't58)) (tense (*var* 't17))
+                                    (time (*var* 't59))))
+                                  ('t57
+                                   (plan (name call_help)
+                                         (planner (*var* 't41))
+                                         (object (*var* 't40))))
+                                  ('t56
+                                   (goal (name help) (planner (*var* 't40))
+                                    (object (*var* 't41))))
+                                  ('t55
+                                   (plan (name not_agree)
+                                         (planner (*var* 't22))
+                                         (object (*var* 't15))))
+                                  ('t54
+                                   (plan (name look_in) (planner (*var* 't29))
+                                         (object (*var* 't38))))
+                                  ('t53
+                                   (plan (name see_otherside)
+                                         (planner (*var* 't22))
+                                         (object (*var* 't38))))
+                                  ('t52
+                                   (is (actor (*var* 't22))
+                                    (object (*var* 't22)) (state (*var* 't49))
+                                    (tense (*var* 't50)) (time (*var* 't51))))
+                                  ('t48
+                                   (plan (name snatch) (planner (*var* 't15))
+                                         (object (*var* 't22))
+                                         (instrument (*var* 't16))))
+                                  ('t47
+                                   (plan (name find_opport)
+                                         (planner (*var* 't15))
+                                         (act (*var* 't46))))
+                                  ('t45
+                                   (goal (name help) (planner (*var* 't40))
+                                    (object (*var* 't22))))
+                                  ('t44
+                                   (plan (name find_opport)
+                                         (planner (*var* 't29))
+                                         (object (*var* 't22))))
+                                  ('t43
+                                   (plan (name find_opport)
+                                         (planner (*var* 't15))
+                                         (co_planner (*var* 't29))
+                                         (object (*var* 't22))))
+                                  ('t42
+                                   (goal (name provide_help)
+                                    (planner (*var* 't40))
+                                    (object (*var* 't41))))
+                                  ('t39
+                                   (plan (name check_house)
+                                         (planner (*var* 't29))
+                                         (objective (*var* 't37))
+                                         (object (*var* 't38))))
+                                  ('t36
+                                   (plan (name accomplice)
+                                         (planner (*var* 't15))
+                                         (object (*var* 't29))))
+                                  ('t35
+                                   (plan (name find_someone)
+                                         (planner (*var* 't29))
+                                         (object (*var* 't22))))
+                                  ('t34
+                                   (ptrans (actor (*var* 't15))
+                                           (instrument (*var* 't16))
+                                           (to (*var* 't32))
+                                           (tense (*var* 't17))
+                                           (co_agent (*var* 't29))
+                                           (time (*var* 't33))))
+                                  ('t31
+                                   (propel (actor (*var* 't29))
+                                           (object (*var* 't25))
+                                           (tense (*var* 't17))
+                                           (time (*var* 't30))))
+                                  ('t28
+                                   (propel (actor (*var* 't22))
+                                           (object (*var* 't25))
+                                           (state (*var* 't26))
+                                           (tense (*var* 't17))
+                                           (time (*var* 't27))))
+                                  ('t24
+                                   (propel (actor (*var* 't15))
+                                           (object (*var* 't22))
+                                           (tense (*var* 't17))
+                                           (to (*var* 't16))
+                                           (time (*var* 't23))))
+                                  ('t21
+                                   (ptrans (actor (*var* 't15))
+                                           (object (*var* 't16))
+                                           (tense (*var* 't17))
+                                           (to (*var* 't18))
+                                           (time (*var* 't19))))
+                                  ('t20
+                                   (do (actor 
+                                        (*var* 't15)))))
+                     :roles_list (((t74 (at |time-6|)) (t73 (perfect (past)))
+                                   (t71
+                                    (plan (name get)
+                                          (planner (human (female (ann))))
+                                          (objective
+                                           (ptrans
+                                            (actor (human (male (jack))))
+                                            (object (human (male (jack))))
+                                            (to (human (female (ann))))))))
+                                   (t63 (at |time-9|))
+                                   (t62 (intensity (val (10))))
+                                   (t59 (at |time-11|))
+                                   (t58 (speak (state (intensity (val (10))))))
+                                   (t51 (at |time-13|))
+                                   (t50 (perfect (present)))
+                                   (t49 (location (val (-10))))
+                                   (t46
+                                    (before
+                                     (ptrans (actor (human (male (jack)))))))
+                                   (t41 (group (name (neighbors))))
+                                   (t40 (group (law (police))))
+                                   (t38 (artifact (dwelling (house))))
+                                   (t37 (prox (actor (human (female (sue))))))
+                                   (t33 (at (time (date (august-1979)))))
+                                   (t32 (artifact (dwelling (townville))))
+                                   (t30 (at |time-4|))
+                                   (t29 (human (female (lisa))))
+                                   (t27 (at |time-7|)) (t26 (object (open)))
+                                   (t25 (artifact (opening (door))))
+                                   (t23 (at |time-8|))
+                                   (t22 (human (female (sue))))
+                                   (t19 (at |time-10|))
+                                   (t18 (state (val (-10))))
+                                   (t17 (simple (past)))
+                                   (t16 (artifact (transportation (car))))
+                                   (t15 (human (female (ann))))))
+                     :progressive ((cause (agent (or (and (t86))))
+                                          (effect
+                                           (or
+                                            (and
+                                             (t36 (means plan-part))
+                                             (t79 (means consequence))))))
+                                   (cause (agent (or (and (t85))))
+                                          (effect
+                                           (or
+                                            (and
+                                             (t77 (means plan-part))
+                                             (t78 (means consequence))))))
+                                   (cause (agent (or (and (t54))))
+                                          (effect
+                                           (or
+                                            (and (t76 (means consequence))))))
+                                   (cause (agent (or (and (t84))))
+                                          (effect
+                                           (or
+                                            (and
+                                             (t72 (means plan-part))
+                                             (t75 (means consequence))))))
+                                   (cause (agent (or (and (t53))))
+                                          (effect
+                                           (or
+                                            (and (t70 (means consequence))))))
+                                   (cause (agent (or (and (t83))))
+                                          (effect
+                                           (or
+                                            (and
+                                             (t48 (means plan-part))
+                                             (t68 (means consequence))
+                                             (t55 (means plan-part))
+                                             (t69 (means plan-part))))))
+                                   (cause (agent (or (and (t55))))
+                                          (effect
+                                           (or
+                                            (and
+                                             (t66 (means sub-goal))
+                                             (t68 (means consequence))
+                                             (t67 (means sub-goal))))))
+                                   (cause (agent (or (and (t67))))
+                                          (effect
+                                           (or
+                                            (and
+                                             (t65 (means sub-goal))
+                                             (t64 (means consequence))
+                                             (t66 (means sub-goal))))))
+                                   (cause (agent (or (and (t66))))
+                                          (effect
+                                           (or
+                                            (and (t64 (means consequence))))))
+                                   (cause (agent (or (and (t69))))
+                                          (effect
+                                           (or
+                                            (and (t61 (means consequence))))))
+                                   (cause (agent (or (and (t65))))
+                                          (effect
+                                           (or
+                                            (and
+                                             (t57 (means plan-part))
+                                             (t60 (means consequence))))))
+                                   (cause (agent (or (and (t57))))
+                                          (effect
+                                           (or
+                                            (and
+                                             (t56 (means plan-part))
+                                             (t42 (means plan-part))
+                                             (t45 (means plan-part))))))
+                                   (cause (agent (or (and (t48))))
+                                          (effect
+                                           (or
+                                            (and
+                                             (t45 (means plan-part))
+                                             (t55 (means plan-part))))))
+                                   (cause (agent (or (and (t77))))
+                                          (effect
+                                           (or
+                                            (and
+                                             (t43 (means plan-part))
+                                             (t47 (means plan-part))))))
+                                   (cause (agent (or (and (t72))))
+                                          (effect
+                                           (or (and (t36 (means plan-part))))))
+                                   (cause (agent (or (and (t47))))
+                                          (effect
+                                           (or (and (t36 (means sub-goal))))))
+                                   (cause (agent (or (and (t45))))
+                                          (effect
+                                           (or (and (t42 (means sub-goal))))))
+                                   (cause (agent (or (and (t39))))
+                                          (effect
+                                           (or
+                                            (and
+                                             (t53 (means sub-goal))
+                                             (t54 (means sub-goal))))))
+                                   (cause (agent (or (and (t82))))
+                                          (effect
+                                           (or
+                                            (and
+                                             (t43 (means sub-goal))
+                                             (t52 (means domain))
+                                             (t36 (means sub-goal))
+                                             (t48 (means sub-goal))
+                                             (t47 (means sub-goal))
+                                             (t45 (means sub-goal))
+                                             (t35 (means sub-goal))
+                                             (t44 (means sub-goal))))))
+                                   (cause (agent (or (and (t56))))
+                                          (effect
+                                           (or (and (t42 (means sub-goal))))))
+                                   (cause (agent (or (and (t35))))
+                                          (effect
+                                           (or (and (t39 (means sub-goal))))))
+                                   (cause (agent (or (and (t44))))
+                                          (effect
+                                           (or
+                                            (and
+                                             (t35 (means sub-goal))
+                                             (t36 (means sub-goal))))))
+                                   (cause (agent (or (and (t43))))
+                                          (effect
+                                           (or
+                                            (and
+                                             (t35 (means sub-goal))
+                                             (t36 (means sub-goal))))))
+                                   (cause (agent (or (and (t81))))
+                                          (effect
+                                           (or (and (t31 (means agency))))))
+                                   (cause (agent (or (and (t80))))
+                                          (effect
+                                           (or (and (t28 (means agency))))))
+                                   (cause (agent (or (and (t20))))
+                                          (effect
+                                           (or
+                                            (and
+                                             (t21 (means agency))
+                                             (t34 (means agency))
+                                             (t24 (means agency)))))))
+                     :regressive ((cause (agent
+                                          (or (and (t86 (means consequence)))))
+                                         (effect (or (and (t79)))))
+                                  (cause (agent
+                                          (or (and (t85 (means consequence)))))
+                                         (effect (or (and (t78)))))
+                                  (cause (agent
+                                          (or (and (t85 (means plan-part)))))
+                                         (effect (or (and (t77)))))
+                                  (cause (agent
+                                          (or (and (t54 (means consequence)))))
+                                         (effect (or (and (t76)))))
+                                  (cause (agent
+                                          (or (and (t84 (means consequence)))))
+                                         (effect (or (and (t75)))))
+                                  (cause (agent
+                                          (or (and (t84 (means plan-part)))))
+                                         (effect (or (and (t72)))))
+                                  (cause (agent
+                                          (or (and (t53 (means consequence)))))
+                                         (effect (or (and (t70)))))
+                                  (cause (agent
+                                          (or (and (t83 (means plan-part)))))
+                                         (effect (or (and (t69)))))
+                                  (cause (agent
+                                          (or
+                                           (and
+                                            (t55 (means consequence))
+                                            (t83 (means consequence)))))
+                                         (effect (or (and (t68)))))
+                                  (cause (agent
+                                          (or (and (t55 (means sub-goal)))))
+                                         (effect (or (and (t67)))))
+                                  (cause (agent
+                                          (or
+                                           (and
+                                            (t67 (means sub-goal))
+                                            (t55 (means sub-goal)))))
+                                         (effect (or (and (t66)))))
+                                  (cause (agent
+                                          (or (and (t67 (means sub-goal)))))
+                                         (effect (or (and (t65)))))
+                                  (cause (agent
+                                          (or
+                                           (and
+                                            (t66 (means consequence))
+                                            (t67 (means consequence)))))
+                                         (effect (or (and (t64)))))
+                                  (cause (agent
+                                          (or (and (t69 (means consequence)))))
+                                         (effect (or (and (t61)))))
+                                  (cause (agent
+                                          (or (and (t65 (means consequence)))))
+                                         (effect (or (and (t60)))))
+                                  (cause (agent
+                                          (or (and (t65 (means plan-part)))))
+                                         (effect (or (and (t57)))))
+                                  (cause (agent
+                                          (or (and (t57 (means plan-part)))))
+                                         (effect (or (and (t56)))))
+                                  (cause (agent
+                                          (or
+                                           (and
+                                            (t48 (means plan-part))
+                                            (t83 (means plan-part)))))
+                                         (effect (or (and (t55)))))
+                                  (cause (agent
+                                          (or (and (t39 (means sub-goal)))))
+                                         (effect (or (and (t54)))))
+                                  (cause (agent
+                                          (or (and (t39 (means sub-goal)))))
+                                         (effect (or (and (t53)))))
+                                  (cause (agent
+                                          (or (and (t82 (means domain)))))
+                                         (effect (or (and (t52)))))
+                                  (cause (agent
+                                          (or
+                                           (and
+                                            (t82 (means sub-goal))
+                                            (t83 (means plan-part)))))
+                                         (effect (or (and (t48)))))
+                                  (cause (agent
+                                          (or
+                                           (and
+                                            (t82 (means sub-goal))
+                                            (t77 (means plan-part)))))
+                                         (effect (or (and (t47)))))
+                                  (cause (agent
+                                          (or
+                                           (and
+                                            (t82 (means sub-goal))
+                                            (t57 (means plan-part))
+                                            (t48 (means plan-part)))))
+                                         (effect (or (and (t45)))))
+                                  (cause (agent
+                                          (or (and (t82 (means sub-goal)))))
+                                         (effect (or (and (t44)))))
+                                  (cause (agent
+                                          (or
+                                           (and
+                                            (t82 (means sub-goal))
+                                            (t77 (means plan-part)))))
+                                         (effect (or (and (t43)))))
+                                  (cause (agent
+                                          (or
+                                           (and
+                                            (t56 (means sub-goal))
+                                            (t57 (means plan-part))
+                                            (t45 (means sub-goal)))))
+                                         (effect (or (and (t42)))))
+                                  (cause (agent
+                                          (or (and (t35 (means sub-goal)))))
+                                         (effect (or (and (t39)))))
+                                  (cause (agent
+                                          (or
+                                           (and
+                                            (t43 (means sub-goal))
+                                            (t86 (means plan-part))
+                                            (t72 (means plan-part))
+                                            (t47 (means sub-goal))
+                                            (t82 (means sub-goal))
+                                            (t44 (means sub-goal)))))
+                                         (effect (or (and (t36)))))
+                                  (cause (agent
+                                          (or
+                                           (and
+                                            (t43 (means sub-goal))
+                                            (t82 (means sub-goal))
+                                            (t44 (means sub-goal)))))
+                                         (effect (or (and (t35)))))
+                                  (cause (agent
+                                          (or (and (t20 (means agency)))))
+                                         (effect (or (and (t34)))))
+                                  (cause (agent
+                                          (or (and (t81 (means agency)))))
+                                         (effect (or (and (t31)))))
+                                  (cause (agent
+                                          (or (and (t80 (means agency)))))
+                                         (effect (or (and (t28)))))
+                                  (cause (agent
+                                          (or (and (t20 (means agency)))))
+                                         (effect (or (and (t24)))))
+                                  (cause (agent
+                                          (or (and (t20 (means agency)))))
+                                         (effect (or (and (t21)))))))

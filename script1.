@@ -1,0 +1,1080 @@
+Dribbling to SYS$SYSDEVICE:[UD.GCSS.BOZSAHIN.DISSERTATION]SCRIPT1.;5
+
+nil
+Lisp>> 
+(print_hypothesis (rloff 'ep1.hyp))
+
+
+                                 Causal Hypothesis
+
+
+                         Name : Ann/Lisa vs Sue
+
+                         Derived from : (Ann, Lisa, Jack, and Sue)
+
+
+
+Progressive causation : 
+-----------------------
+
+
+causes : 
+  or
+    and
+      (plan (name go_in_group) (planner (human (female (ann))))
+            (object (human (female (lisa))))
+            (location (artifact (dwelling (townville)))))
+effects: 
+  or
+    and
+      (plan (name accomplice) (planner (human (female (ann))))
+            (object (human (female (lisa)))))
+      (means plan-part)
+      (ptrans (actor (human (female (ann))))
+              (instrument (artifact (transportation (car))))
+              (cause (human (female (ann))))
+              (to (artifact (dwelling (townville)))) (tense (simple (past)))
+              (co_agent (human (female (lisa))))
+              (time (at (time (date (august-1979))))))
+      (means consequence)
+
+
+causes : 
+  or
+    and
+      (plan (name do_after_event) (planner (human (female (ann))))
+            (object (before (ptrans (actor (human (male (jack))))))))
+effects: 
+  or
+    and
+      (plan (name wait_for_event) (planner (human (female (ann))))
+            (act (before (ptrans (actor (human (male (jack))))))))
+      (means plan-part)
+      (attend (actor (human (female (ann)))) (object (human (female (ann))))
+       (tense (simple (past))) (co_agent (human (female (lisa))))
+       (time (before (ptrans (actor (human (male (jack))))))))
+      (means consequence)
+
+
+causes : 
+  or
+    and
+      (plan (name look_in) (planner (human (female (lisa))))
+            (object (artifact (dwelling (house)))))
+effects: 
+  or
+    and
+      (propel (actor (human (female (lisa)))) (cause (human (female (lisa))))
+              (object (artifact (opening (door)))) (tense (simple (past)))
+              (time (at time-4)))
+      (means consequence)
+
+
+causes : 
+  or
+    and
+      (plan (name let_know) (planner (human (female (ann))))
+            (to (human (female (lisa))))
+            (object
+             (plan (name get) (planner (human (female (ann))))
+                   (objective
+                    (ptrans (actor (human (male (jack))))
+                            (object (human (male (jack))))
+                            (to (human (female (ann)))))))))
+effects: 
+  or
+    and
+      (plan (name ask_help) (planner (human (female (ann))))
+            (object (human (female (lisa))))
+            (objective
+             (plan (name get) (planner (human (female (ann))))
+                   (objective
+                    (ptrans (actor (human (male (jack))))
+                            (object (human (male (jack))))
+                            (to (human (female (ann)))))))))
+      (means plan-part)
+      (mtrans (actor (human (female (ann))))
+              (object
+               (plan (name get) (planner (human (female (ann))))
+                     (objective
+                      (ptrans (actor (human (male (jack))))
+                              (object (human (male (jack))))
+                              (to (human (female (ann))))))))
+              (to (human (female (lisa)))) (tense (perfect (past)))
+              (time (at time-6)))
+      (means consequence)
+
+
+causes : 
+  or
+    and
+      (plan (name see_otherside) (planner (human (female (sue))))
+            (object (artifact (dwelling (house)))))
+effects: 
+  or
+    and
+      (propel (actor (human (female (sue)))) (cause (human (female (sue))))
+              (object (artifact (opening (door)))) (state (object (open)))
+              (tense (simple (past))) (time (at time-7)))
+      (means consequence)
+
+
+causes : 
+  or
+    and
+      (plan (name force_into) (planner (human (female (ann))))
+            (object (human (female (sue))))
+            (to (artifact (transportation (car)))))
+effects: 
+  or
+    and
+      (plan (name snatch) (planner (human (female (ann))))
+            (object (human (female (sue))))
+            (instrument (artifact (transportation (car)))))
+      (means plan-part)
+      (propel (actor (human (female (ann)))) (cause (human (female (ann))))
+              (object (human (female (sue)))) (tense (simple (past)))
+              (to (artifact (transportation (car)))) (time (at time-8)))
+      (means consequence)
+      (plan (name not_agree) (planner (human (female (sue))))
+            (object (human (female (ann)))))
+      (means plan-part)
+      (plan (name drive_away) (planner (human (female (ann))))
+            (object (artifact (transportation (car))))
+            (to (state (val (-10)))))
+      (means plan-part)
+
+
+causes : 
+  or
+    and
+      (plan (name not_agree) (planner (human (female (sue))))
+            (object (human (female (ann)))))
+effects: 
+  or
+    and
+      (plan (name surprised) (planner (human (female (sue))))
+            (object (speak (state (intensity (val (10)))))))
+      (means sub-goal)
+      (propel (actor (human (female (ann)))) (cause (human (female (ann))))
+              (object (human (female (sue)))) (tense (simple (past)))
+              (to (artifact (transportation (car)))) (time (at time-8)))
+      (means consequence)
+      (plan (name attention) (planner (human (female (sue))))
+            (objective (speak (state (intensity (val (10)))))))
+      (means sub-goal)
+
+
+causes : 
+  or
+    and
+      (plan (name attention) (planner (human (female (sue))))
+            (objective (speak (state (intensity (val (10)))))))
+effects: 
+  or
+    and
+      (plan (name know_event) (planner (group (name (neighbors))))
+            (objective (speak (state (intensity (val (10)))))))
+      (means sub-goal)
+      (speak (actor (human (female (sue)))) (state (intensity (val (10))))
+       (tense (simple (past))) (time (at time-9)))
+      (means consequence)
+      (plan (name surprised) (planner (human (female (sue))))
+            (object (speak (state (intensity (val (10)))))))
+      (means sub-goal)
+
+
+causes : 
+  or
+    and
+      (plan (name surprised) (planner (human (female (sue))))
+            (object (speak (state (intensity (val (10)))))))
+effects: 
+  or
+    and
+      (speak (actor (human (female (sue)))) (state (intensity (val (10))))
+       (tense (simple (past))) (time (at time-9)))
+      (means consequence)
+
+
+causes : 
+  or
+    and
+      (plan (name drive_away) (planner (human (female (ann))))
+            (object (artifact (transportation (car))))
+            (to (state (val (-10)))))
+effects: 
+  or
+    and
+      (ptrans (actor (human (female (ann)))) (cause (human (female (ann))))
+              (object (artifact (transportation (car))))
+              (tense (simple (past))) (to (state (val (-10))))
+              (time (at time-10)))
+      (means consequence)
+
+
+causes : 
+  or
+    and
+      (plan (name know_event) (planner (group (name (neighbors))))
+            (objective (speak (state (intensity (val (10)))))))
+effects: 
+  or
+    and
+      (plan (name call_help) (planner (group (name (neighbors))))
+            (object (group (law (police)))))
+      (means plan-part)
+      (attend (actor (group (name (neighbors))))
+       (object (speak (state (intensity (val (10))))))
+       (tense (simple (past))) (time (at time-11)))
+      (means consequence)
+
+
+causes : 
+  or
+    and
+      (plan (name call_help) (planner (group (name (neighbors))))
+            (object (group (law (police)))))
+effects: 
+  or
+    and
+      (goal (name help) (planner (group (law (police))))
+       (object (group (name (neighbors)))))
+      (means plan-part)
+      (goal (name provide_help) (planner (group (law (police))))
+       (object (group (name (neighbors)))))
+      (means plan-part)
+      (goal (name help) (planner (group (law (police))))
+       (object (human (female (sue)))))
+      (means plan-part)
+
+
+causes : 
+  or
+    and
+      (plan (name snatch) (planner (human (female (ann))))
+            (object (human (female (sue))))
+            (instrument (artifact (transportation (car)))))
+effects: 
+  or
+    and
+      (goal (name help) (planner (group (law (police))))
+       (object (human (female (sue)))))
+      (means plan-part)
+      (plan (name not_agree) (planner (human (female (sue))))
+            (object (human (female (ann)))))
+      (means plan-part)
+
+
+causes : 
+  or
+    and
+      (plan (name wait_for_event) (planner (human (female (ann))))
+            (act (before (ptrans (actor (human (male (jack))))))))
+effects: 
+  or
+    and
+      (plan (name find_opport) (planner (human (female (ann))))
+            (co_planner (human (female (lisa))))
+            (object (human (female (sue)))))
+      (means plan-part)
+      (plan (name find_opport) (planner (human (female (ann))))
+            (act (before (ptrans (actor (human (male (jack))))))))
+      (means plan-part)
+
+
+causes : 
+  or
+    and
+      (plan (name ask_help) (planner (human (female (ann))))
+            (object (human (female (lisa))))
+            (objective
+             (plan (name get) (planner (human (female (ann))))
+                   (objective
+                    (ptrans (actor (human (male (jack))))
+                            (object (human (male (jack))))
+                            (to (human (female (ann)))))))))
+effects: 
+  or
+    and
+      (plan (name accomplice) (planner (human (female (ann))))
+            (object (human (female (lisa)))))
+      (means plan-part)
+
+
+causes : 
+  or
+    and
+      (plan (name find_opport) (planner (human (female (ann))))
+            (act (before (ptrans (actor (human (male (jack))))))))
+effects: 
+  or
+    and
+      (plan (name accomplice) (planner (human (female (ann))))
+            (object (human (female (lisa)))))
+      (means sub-goal)
+
+
+causes : 
+  or
+    and
+      (goal (name help) (planner (group (law (police))))
+       (object (human (female (sue)))))
+effects: 
+  or
+    and
+      (goal (name provide_help) (planner (group (law (police))))
+       (object (group (name (neighbors)))))
+      (means sub-goal)
+
+
+causes : 
+  or
+    and
+      (plan (name check_house) (planner (human (female (lisa))))
+            (objective (prox (actor (human (female (sue))))))
+            (object (artifact (dwelling (house)))))
+effects: 
+  or
+    and
+      (plan (name see_otherside) (planner (human (female (sue))))
+            (object (artifact (dwelling (house)))))
+      (means sub-goal)
+      (plan (name look_in) (planner (human (female (lisa))))
+            (object (artifact (dwelling (house)))))
+      (means sub-goal)
+
+
+causes : 
+  or
+    and
+      (goal (name abduct) (planner (human (female (ann))))
+       (object (human (female (sue)))) (co_planner (human (female (lisa)))))
+effects: 
+  or
+    and
+      (plan (name find_opport) (planner (human (female (ann))))
+            (co_planner (human (female (lisa))))
+            (object (human (female (sue)))))
+      (means sub-goal)
+      (is (actor (human (female (sue)))) (object (human (female (sue))))
+       (state (location (val (-10)))) (tense (perfect (present)))
+       (time (at time-13)))
+      (means domain)
+      (plan (name accomplice) (planner (human (female (ann))))
+            (object (human (female (lisa)))))
+      (means sub-goal)
+      (plan (name snatch) (planner (human (female (ann))))
+            (object (human (female (sue))))
+            (instrument (artifact (transportation (car)))))
+      (means sub-goal)
+      (plan (name find_opport) (planner (human (female (ann))))
+            (act (before (ptrans (actor (human (male (jack))))))))
+      (means sub-goal)
+      (goal (name help) (planner (group (law (police))))
+       (object (human (female (sue)))))
+      (means sub-goal)
+      (plan (name find_someone) (planner (human (female (lisa))))
+            (object (human (female (sue)))))
+      (means sub-goal)
+      (plan (name find_opport) (planner (human (female (lisa))))
+            (object (human (female (sue)))))
+      (means sub-goal)
+
+
+causes : 
+  or
+    and
+      (goal (name help) (planner (group (law (police))))
+       (object (group (name (neighbors)))))
+effects: 
+  or
+    and
+      (goal (name provide_help) (planner (group (law (police))))
+       (object (group (name (neighbors)))))
+      (means sub-goal)
+
+
+causes : 
+  or
+    and
+      (plan (name find_someone) (planner (human (female (lisa))))
+            (object (human (female (sue)))))
+effects: 
+  or
+    and
+      (plan (name check_house) (planner (human (female (lisa))))
+            (objective (prox (actor (human (female (sue))))))
+            (object (artifact (dwelling (house)))))
+      (means sub-goal)
+
+
+causes : 
+  or
+    and
+      (plan (name find_opport) (planner (human (female (lisa))))
+            (object (human (female (sue)))))
+effects: 
+  or
+    and
+      (plan (name find_someone) (planner (human (female (lisa))))
+            (object (human (female (sue)))))
+      (means sub-goal)
+      (plan (name accomplice) (planner (human (female (ann))))
+            (object (human (female (lisa)))))
+      (means sub-goal)
+
+
+causes : 
+  or
+    and
+      (plan (name find_opport) (planner (human (female (ann))))
+            (co_planner (human (female (lisa))))
+            (object (human (female (sue)))))
+effects: 
+  or
+    and
+      (plan (name find_someone) (planner (human (female (lisa))))
+            (object (human (female (sue)))))
+      (means sub-goal)
+      (plan (name accomplice) (planner (human (female (ann))))
+            (object (human (female (lisa)))))
+      (means sub-goal)
+
+
+causes : 
+  or
+    and
+      (do (actor 
+           (human (female (lisa)))))
+effects: 
+  or
+    and
+      (propel (actor (human (female (lisa))))
+              (object (artifact (opening (door)))) (tense (simple (past)))
+              (time (at time-4)))
+      (means agency)
+
+
+causes : 
+  or
+    and
+      (do (actor 
+           (human (female (sue)))))
+effects: 
+  or
+    and
+      (propel (actor (human (female (sue))))
+              (object (artifact (opening (door)))) (state (object (open)))
+              (tense (simple (past))) (time (at time-7)))
+      (means agency)
+
+
+causes : 
+  or
+    and
+      (do (actor 
+           (human (female (ann)))))
+effects: 
+  or
+    and
+      (ptrans (actor (human (female (ann))))
+              (object (artifact (transportation (car))))
+              (tense (simple (past))) (to (state (val (-10))))
+              (time (at time-10)))
+      (means agency)
+      (ptrans (actor (human (female (ann))))
+              (instrument (artifact (transportation (car))))
+              (to (artifact (dwelling (townville)))) (tense (simple (past)))
+              (co_agent (human (female (lisa))))
+              (time (at (time (date (august-1979))))))
+      (means agency)
+      (propel (actor (human (female (ann)))) (object (human (female (sue))))
+              (tense (simple (past))) (to (artifact (transportation (car))))
+              (time (at time-8)))
+      (means agency)
+
+
+Regressive causation  : 
+-----------------------
+
+
+causes : 
+  or
+    and
+      (plan (name go_in_group) (planner (human (female (ann))))
+            (object (human (female (lisa))))
+            (location (artifact (dwelling (townville)))))
+      (means consequence)
+effects: 
+  or
+    and
+      (ptrans (actor (human (female (ann))))
+              (instrument (artifact (transportation (car))))
+              (cause (human (female (ann))))
+              (to (artifact (dwelling (townville)))) (tense (simple (past)))
+              (co_agent (human (female (lisa))))
+              (time (at (time (date (august-1979))))))
+
+
+causes : 
+  or
+    and
+      (plan (name do_after_event) (planner (human (female (ann))))
+            (object (before (ptrans (actor (human (male (jack))))))))
+      (means consequence)
+effects: 
+  or
+    and
+      (attend (actor (human (female (ann)))) (object (human (female (ann))))
+       (tense (simple (past))) (co_agent (human (female (lisa))))
+       (time (before (ptrans (actor (human (male (jack))))))))
+
+
+causes : 
+  or
+    and
+      (plan (name do_after_event) (planner (human (female (ann))))
+            (object (before (ptrans (actor (human (male (jack))))))))
+      (means plan-part)
+effects: 
+  or
+    and
+      (plan (name wait_for_event) (planner (human (female (ann))))
+            (act (before (ptrans (actor (human (male (jack))))))))
+
+
+causes : 
+  or
+    and
+      (plan (name look_in) (planner (human (female (lisa))))
+            (object (artifact (dwelling (house)))))
+      (means consequence)
+effects: 
+  or
+    and
+      (propel (actor (human (female (lisa)))) (cause (human (female (lisa))))
+              (object (artifact (opening (door)))) (tense (simple (past)))
+              (time (at time-4)))
+
+
+causes : 
+  or
+    and
+      (plan (name let_know) (planner (human (female (ann))))
+            (to (human (female (lisa))))
+            (object
+             (plan (name get) (planner (human (female (ann))))
+                   (objective
+                    (ptrans (actor (human (male (jack))))
+                            (object (human (male (jack))))
+                            (to (human (female (ann)))))))))
+      (means consequence)
+effects: 
+  or
+    and
+      (mtrans (actor (human (female (ann))))
+              (object
+               (plan (name get) (planner (human (female (ann))))
+                     (objective
+                      (ptrans (actor (human (male (jack))))
+                              (object (human (male (jack))))
+                              (to (human (female (ann))))))))
+              (to (human (female (lisa)))) (tense (perfect (past)))
+              (time (at time-6)))
+
+
+causes : 
+  or
+    and
+      (plan (name let_know) (planner (human (female (ann))))
+            (to (human (female (lisa))))
+            (object
+             (plan (name get) (planner (human (female (ann))))
+                   (objective
+                    (ptrans (actor (human (male (jack))))
+                            (object (human (male (jack))))
+                            (to (human (female (ann)))))))))
+      (means plan-part)
+effects: 
+  or
+    and
+      (plan (name ask_help) (planner (human (female (ann))))
+            (object (human (female (lisa))))
+            (objective
+             (plan (name get) (planner (human (female (ann))))
+                   (objective
+                    (ptrans (actor (human (male (jack))))
+                            (object (human (male (jack))))
+                            (to (human (female (ann)))))))))
+
+
+causes : 
+  or
+    and
+      (plan (name see_otherside) (planner (human (female (sue))))
+            (object (artifact (dwelling (house)))))
+      (means consequence)
+effects: 
+  or
+    and
+      (propel (actor (human (female (sue)))) (cause (human (female (sue))))
+              (object (artifact (opening (door)))) (state (object (open)))
+              (tense (simple (past))) (time (at time-7)))
+
+
+causes : 
+  or
+    and
+      (plan (name force_into) (planner (human (female (ann))))
+            (object (human (female (sue))))
+            (to (artifact (transportation (car)))))
+      (means plan-part)
+effects: 
+  or
+    and
+      (plan (name drive_away) (planner (human (female (ann))))
+            (object (artifact (transportation (car))))
+            (to (state (val (-10)))))
+
+
+causes : 
+  or
+    and
+      (plan (name not_agree) (planner (human (female (sue))))
+            (object (human (female (ann)))))
+      (means consequence)
+      (plan (name force_into) (planner (human (female (ann))))
+            (object (human (female (sue))))
+            (to (artifact (transportation (car)))))
+      (means consequence)
+effects: 
+  or
+    and
+      (propel (actor (human (female (ann)))) (cause (human (female (ann))))
+              (object (human (female (sue)))) (tense (simple (past)))
+              (to (artifact (transportation (car)))) (time (at time-8)))
+
+
+causes : 
+  or
+    and
+      (plan (name not_agree) (planner (human (female (sue))))
+            (object (human (female (ann)))))
+      (means sub-goal)
+effects: 
+  or
+    and
+      (plan (name attention) (planner (human (female (sue))))
+            (objective (speak (state (intensity (val (10)))))))
+
+
+causes : 
+  or
+    and
+      (plan (name attention) (planner (human (female (sue))))
+            (objective (speak (state (intensity (val (10)))))))
+      (means sub-goal)
+      (plan (name not_agree) (planner (human (female (sue))))
+            (object (human (female (ann)))))
+      (means sub-goal)
+effects: 
+  or
+    and
+      (plan (name surprised) (planner (human (female (sue))))
+            (object (speak (state (intensity (val (10)))))))
+
+
+causes : 
+  or
+    and
+      (plan (name attention) (planner (human (female (sue))))
+            (objective (speak (state (intensity (val (10)))))))
+      (means sub-goal)
+effects: 
+  or
+    and
+      (plan (name know_event) (planner (group (name (neighbors))))
+            (objective (speak (state (intensity (val (10)))))))
+
+
+causes : 
+  or
+    and
+      (plan (name surprised) (planner (human (female (sue))))
+            (object (speak (state (intensity (val (10)))))))
+      (means consequence)
+      (plan (name attention) (planner (human (female (sue))))
+            (objective (speak (state (intensity (val (10)))))))
+      (means consequence)
+effects: 
+  or
+    and
+      (speak (actor (human (female (sue)))) (state (intensity (val (10))))
+       (tense (simple (past))) (time (at time-9)))
+
+
+causes : 
+  or
+    and
+      (plan (name drive_away) (planner (human (female (ann))))
+            (object (artifact (transportation (car))))
+            (to (state (val (-10)))))
+      (means consequence)
+effects: 
+  or
+    and
+      (ptrans (actor (human (female (ann)))) (cause (human (female (ann))))
+              (object (artifact (transportation (car))))
+              (tense (simple (past))) (to (state (val (-10))))
+              (time (at time-10)))
+
+
+causes : 
+  or
+    and
+      (plan (name know_event) (planner (group (name (neighbors))))
+            (objective (speak (state (intensity (val (10)))))))
+      (means consequence)
+effects: 
+  or
+    and
+      (attend (actor (group (name (neighbors))))
+       (object (speak (state (intensity (val (10))))))
+       (tense (simple (past))) (time (at time-11)))
+
+
+causes : 
+  or
+    and
+      (plan (name know_event) (planner (group (name (neighbors))))
+            (objective (speak (state (intensity (val (10)))))))
+      (means plan-part)
+effects: 
+  or
+    and
+      (plan (name call_help) (planner (group (name (neighbors))))
+            (object (group (law (police)))))
+
+
+causes : 
+  or
+    and
+      (plan (name call_help) (planner (group (name (neighbors))))
+            (object (group (law (police)))))
+      (means plan-part)
+effects: 
+  or
+    and
+      (goal (name help) (planner (group (law (police))))
+       (object (group (name (neighbors)))))
+
+
+causes : 
+  or
+    and
+      (plan (name snatch) (planner (human (female (ann))))
+            (object (human (female (sue))))
+            (instrument (artifact (transportation (car)))))
+      (means plan-part)
+      (plan (name force_into) (planner (human (female (ann))))
+            (object (human (female (sue))))
+            (to (artifact (transportation (car)))))
+      (means plan-part)
+effects: 
+  or
+    and
+      (plan (name not_agree) (planner (human (female (sue))))
+            (object (human (female (ann)))))
+
+
+causes : 
+  or
+    and
+      (plan (name check_house) (planner (human (female (lisa))))
+            (objective (prox (actor (human (female (sue))))))
+            (object (artifact (dwelling (house)))))
+      (means sub-goal)
+effects: 
+  or
+    and
+      (plan (name look_in) (planner (human (female (lisa))))
+            (object (artifact (dwelling (house)))))
+
+
+causes : 
+  or
+    and
+      (plan (name check_house) (planner (human (female (lisa))))
+            (objective (prox (actor (human (female (sue))))))
+            (object (artifact (dwelling (house)))))
+      (means sub-goal)
+effects: 
+  or
+    and
+      (plan (name see_otherside) (planner (human (female (sue))))
+            (object (artifact (dwelling (house)))))
+
+
+causes : 
+  or
+    and
+      (goal (name abduct) (planner (human (female (ann))))
+       (object (human (female (sue)))) (co_planner (human (female (lisa)))))
+      (means domain)
+effects: 
+  or
+    and
+      (is (actor (human (female (sue)))) (object (human (female (sue))))
+       (state (location (val (-10)))) (tense (perfect (present)))
+       (time (at time-13)))
+
+
+causes : 
+  or
+    and
+      (goal (name abduct) (planner (human (female (ann))))
+       (object (human (female (sue)))) (co_planner (human (female (lisa)))))
+      (means sub-goal)
+      (plan (name force_into) (planner (human (female (ann))))
+            (object (human (female (sue))))
+            (to (artifact (transportation (car)))))
+      (means plan-part)
+effects: 
+  or
+    and
+      (plan (name snatch) (planner (human (female (ann))))
+            (object (human (female (sue))))
+            (instrument (artifact (transportation (car)))))
+
+
+causes : 
+  or
+    and
+      (goal (name abduct) (planner (human (female (ann))))
+       (object (human (female (sue)))) (co_planner (human (female (lisa)))))
+      (means sub-goal)
+      (plan (name wait_for_event) (planner (human (female (ann))))
+            (act (before (ptrans (actor (human (male (jack))))))))
+      (means plan-part)
+effects: 
+  or
+    and
+      (plan (name find_opport) (planner (human (female (ann))))
+            (act (before (ptrans (actor (human (male (jack))))))))
+
+
+causes : 
+  or
+    and
+      (goal (name abduct) (planner (human (female (ann))))
+       (object (human (female (sue)))) (co_planner (human (female (lisa)))))
+      (means sub-goal)
+      (plan (name call_help) (planner (group (name (neighbors))))
+            (object (group (law (police)))))
+      (means plan-part)
+      (plan (name snatch) (planner (human (female (ann))))
+            (object (human (female (sue))))
+            (instrument (artifact (transportation (car)))))
+      (means plan-part)
+effects: 
+  or
+    and
+      (goal (name help) (planner (group (law (police))))
+       (object (human (female (sue)))))
+
+
+causes : 
+  or
+    and
+      (goal (name abduct) (planner (human (female (ann))))
+       (object (human (female (sue)))) (co_planner (human (female (lisa)))))
+      (means sub-goal)
+effects: 
+  or
+    and
+      (plan (name find_opport) (planner (human (female (lisa))))
+            (object (human (female (sue)))))
+
+
+causes : 
+  or
+    and
+      (goal (name abduct) (planner (human (female (ann))))
+       (object (human (female (sue)))) (co_planner (human (female (lisa)))))
+      (means sub-goal)
+      (plan (name wait_for_event) (planner (human (female (ann))))
+            (act (before (ptrans (actor (human (male (jack))))))))
+      (means plan-part)
+effects: 
+  or
+    and
+      (plan (name find_opport) (planner (human (female (ann))))
+            (co_planner (human (female (lisa))))
+            (object (human (female (sue)))))
+
+
+causes : 
+  or
+    and
+      (goal (name help) (planner (group (law (police))))
+       (object (group (name (neighbors)))))
+      (means sub-goal)
+      (plan (name call_help) (planner (group (name (neighbors))))
+            (object (group (law (police)))))
+      (means plan-part)
+      (goal (name help) (planner (group (law (police))))
+       (object (human (female (sue)))))
+      (means sub-goal)
+effects: 
+  or
+    and
+      (goal (name provide_help) (planner (group (law (police))))
+       (object (group (name (neighbors)))))
+
+
+causes : 
+  or
+    and
+      (plan (name find_someone) (planner (human (female (lisa))))
+            (object (human (female (sue)))))
+      (means sub-goal)
+effects: 
+  or
+    and
+      (plan (name check_house) (planner (human (female (lisa))))
+            (objective (prox (actor (human (female (sue))))))
+            (object (artifact (dwelling (house)))))
+
+
+causes : 
+  or
+    and
+      (plan (name find_opport) (planner (human (female (ann))))
+            (co_planner (human (female (lisa))))
+            (object (human (female (sue)))))
+      (means sub-goal)
+      (plan (name go_in_group) (planner (human (female (ann))))
+            (object (human (female (lisa))))
+            (location (artifact (dwelling (townville)))))
+      (means plan-part)
+      (plan (name ask_help) (planner (human (female (ann))))
+            (object (human (female (lisa))))
+            (objective
+             (plan (name get) (planner (human (female (ann))))
+                   (objective
+                    (ptrans (actor (human (male (jack))))
+                            (object (human (male (jack))))
+                            (to (human (female (ann)))))))))
+      (means plan-part)
+      (plan (name find_opport) (planner (human (female (ann))))
+            (act (before (ptrans (actor (human (male (jack))))))))
+      (means sub-goal)
+      (goal (name abduct) (planner (human (female (ann))))
+       (object (human (female (sue)))) (co_planner (human (female (lisa)))))
+      (means sub-goal)
+      (plan (name find_opport) (planner (human (female (lisa))))
+            (object (human (female (sue)))))
+      (means sub-goal)
+effects: 
+  or
+    and
+      (plan (name accomplice) (planner (human (female (ann))))
+            (object (human (female (lisa)))))
+
+
+causes : 
+  or
+    and
+      (plan (name find_opport) (planner (human (female (ann))))
+            (co_planner (human (female (lisa))))
+            (object (human (female (sue)))))
+      (means sub-goal)
+      (goal (name abduct) (planner (human (female (ann))))
+       (object (human (female (sue)))) (co_planner (human (female (lisa)))))
+      (means sub-goal)
+      (plan (name find_opport) (planner (human (female (lisa))))
+            (object (human (female (sue)))))
+      (means sub-goal)
+effects: 
+  or
+    and
+      (plan (name find_someone) (planner (human (female (lisa))))
+            (object (human (female (sue)))))
+
+
+causes : 
+  or
+    and
+      (do (actor 
+           (human (female (ann)))))
+      (means agency)
+effects: 
+  or
+    and
+      (ptrans (actor (human (female (ann))))
+              (instrument (artifact (transportation (car))))
+              (to (artifact (dwelling (townville)))) (tense (simple (past)))
+              (co_agent (human (female (lisa))))
+              (time (at (time (date (august-1979))))))
+
+
+causes : 
+  or
+    and
+      (do (actor 
+           (human (female (lisa)))))
+      (means agency)
+effects: 
+  or
+    and
+      (propel (actor (human (female (lisa))))
+              (object (artifact (opening (door)))) (tense (simple (past)))
+              (time (at time-4)))
+
+
+causes : 
+  or
+    and
+      (do (actor 
+           (human (female (sue)))))
+      (means agency)
+effects: 
+  or
+    and
+      (propel (actor (human (female (sue))))
+              (object (artifact (opening (door)))) (state (object (open)))
+              (tense (simple (past))) (time (at time-7)))
+
+
+causes : 
+  or
+    and
+      (do (actor 
+           (human (female (ann)))))
+      (means agency)
+effects: 
+  or
+    and
+      (propel (actor (human (female (ann)))) (object (human (female (sue))))
+              (tense (simple (past))) (to (artifact (transportation (car))))
+              (time (at time-8)))
+
+
+causes : 
+  or
+    and
+      (do (actor 
+           (human (female (ann)))))
+      (means agency)
+effects: 
+  or
+    and
+      (ptrans (actor (human (female (ann))))
+              (object (artifact (transportation (car))))
+              (tense (simple (past))) (to (state (val (-10))))
+              (time (at time-10)))
+
+t
+Lisp>> 
+(dribble)

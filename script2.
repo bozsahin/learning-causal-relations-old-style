@@ -1,0 +1,611 @@
+Dribbling to SYS$SYSDEVICE:[UD.GCSS.BOZSAHIN.DISSERTATION]SCRIPT2.;4
+
+nil
+Lisp>> 
+(print_hypothesis (rloff 'ep2.hyp))
+
+
+                                 Causal Hypothesis
+
+
+                         Name : Dnaiel
+vs MAry
+
+                         Derived from : (Daniel and Mary)
+
+
+
+Progressive causation : 
+-----------------------
+
+
+causes : 
+  or
+    and
+      (plan (name threat) (planner (human (male (daniel))))
+            (object (human (female (mary))))
+            (state (do (actor 
+                        (human (female (mary))))
+                       (to (action (be_free (escape))))))
+            (objective
+             (propel (object (human (female (mary))))
+                     (state (health (val (-10))))))
+            (time (at time-6)))
+effects: 
+  or
+    and
+      (goal (name help) (planner (group (law (police))))
+       (object (human (female (mary)))))
+      (means plan-part)
+      (plan (name not_agree) (planner (human (female (mary))))
+            (object (human (male (daniel)))))
+      (means plan-part)
+
+
+causes : 
+  or
+    and
+      (plan (name allow) (planner (human (male (daniel))))
+            (object (human (female (mary))))
+            (objective
+             (attend (from (human (female (mary))))
+              (actor (group (family (parents))))))
+            (tense (simple (past))) (time (at time-7)))
+effects: 
+  or
+    and
+      (plan (name know_event) (planner (group (family (parents))))
+            (objective
+             (attend (from (human (female (mary))))
+              (actor (group (family (parents)))))))
+      (means plan-part)
+
+
+causes : 
+  or
+    and
+      (is (actor (human (male (daniel))))
+       (state (belief
+               (grasp (actor (human (female (mary))))
+                      (object (group (family (child))))))))
+effects: 
+  or
+    and
+      (goal (name abduct) (planner (human (male (daniel))))
+       (object (human (female (mary)))))
+      (means domain)
+
+
+causes : 
+  or
+    and
+      (plan (name find_someone) (planner (human (male (daniel))))
+            (object (human (female (mary)))))
+effects: 
+  or
+    and
+      (attend (actor (human (male (daniel))))
+       (object (human (male (daniel)))) (to (human (female (mary))))
+       (tense (simple (past))) (time (after (action (earning (work))))))
+      (means consequence)
+
+
+causes : 
+  or
+    and
+      (plan (name force_into) (planner (human (male (daniel))))
+            (object (human (female (mary))))
+            (to (artifact (transportation (car)))))
+effects: 
+  or
+    and
+      (plan (name snatch) (planner (human (male (daniel))))
+            (object (human (female (mary))))
+            (instrument (artifact (transportation (car)))))
+      (means plan-part)
+      (propel (actor (human (male (daniel)))) (cause (human (male (daniel))))
+              (object (human (female (mary)))) (tense (simple (past)))
+              (to (artifact (transportation (car)))) (time (at time-2)))
+      (means consequence)
+      (propel (actor (human (male (daniel)))) (cause (human (male (daniel))))
+              (object (human (female (mary)))) (state (intensity (val (8))))
+              (tense (simple (past))) (to (artifact (transportation (car))))
+              (time (at time-4)))
+      (means consequence)
+      (plan (name not_agree) (planner (human (female (mary))))
+            (object (human (male (daniel)))))
+      (means plan-part)
+      (plan (name drive_away) (planner (human (male (daniel))))
+            (object (artifact (transportation (car))))
+            (to (artifact (dwelling (house)))))
+      (means plan-part)
+
+
+causes : 
+  or
+    and
+      (plan (name not_agree) (planner (human (female (mary))))
+            (object (human (male (daniel)))))
+effects: 
+  or
+    and
+      (propel (actor (human (male (daniel)))) (cause (human (male (daniel))))
+              (object (human (female (mary)))) (state (intensity (val (8))))
+              (tense (simple (past))) (to (artifact (transportation (car))))
+              (time (at time-4)))
+      (means consequence)
+      (propel (actor (human (male (daniel)))) (cause (human (male (daniel))))
+              (object (human (female (mary)))) (tense (simple (past)))
+              (to (artifact (transportation (car)))) (time (at time-2)))
+      (means consequence)
+      (mtrans (actor (human (female (mary))))
+              (object (human (male (daniel)))) (state (mood (val (-10))))
+              (time (at time-3)))
+      (means consequence)
+
+
+causes : 
+  or
+    and
+      (plan (name drive_away) (planner (human (male (daniel))))
+            (object (artifact (transportation (car))))
+            (to (artifact (dwelling (house)))))
+effects: 
+  or
+    and
+      (ptrans (actor (human (male (daniel)))) (cause (human (male (daniel))))
+              (object (artifact (transportation (car))))
+              (tense (simple (past))) (to (artifact (dwelling (house))))
+              (time (at time-5)))
+      (means consequence)
+
+
+causes : 
+  or
+    and
+      (plan (name go_in_group) (planner (group (law (police))))
+            (object (group (health (medicine))))
+            (location (artifact (dwelling (house)))))
+effects: 
+  or
+    and
+      (ptrans (actor (group (law (police)))) (cause (group (law (police))))
+              (tense (simple (past))) (co_agent (group (health (medicine))))
+              (to (artifact (dwelling (house)))) (time (at time-8)))
+      (means consequence)
+
+
+causes : 
+  or
+    and
+      (plan (name arrest) (planner (group (law (police))))
+            (object (human (male (daniel)))))
+effects: 
+  or
+    and
+      (goal (name help) (planner (group (law (police))))
+       (object (human (female (mary)))))
+      (means plan-part)
+      (ptrans (actor (group (law (police)))) (object (human (male (daniel))))
+              (to (artifact (law_enforcement (jail)))) (time (at time-12)))
+      (means consequence)
+
+
+causes : 
+  or
+    and
+      (plan (name snatch) (planner (human (male (daniel))))
+            (object (human (female (mary))))
+            (instrument (artifact (transportation (car)))))
+effects: 
+  or
+    and
+      (goal (name help) (planner (group (law (police))))
+       (object (human (female (mary)))))
+      (means plan-part)
+      (plan (name not_agree) (planner (human (female (mary))))
+            (object (human (male (daniel)))))
+      (means plan-part)
+
+
+causes : 
+  or
+    and
+      (plan (name find_opport) (planner (human (male (daniel))))
+            (object (human (female (mary)))))
+effects: 
+  or
+    and
+      (plan (name find_someone) (planner (human (male (daniel))))
+            (object (human (female (mary)))))
+      (means sub-goal)
+
+
+causes : 
+  or
+    and
+      (goal (name abduct) (planner (human (male (daniel))))
+       (object (human (female (mary)))))
+effects: 
+  or
+    and
+      (plan (name find_opport) (planner (human (male (daniel))))
+            (object (human (female (mary)))))
+      (means sub-goal)
+      (plan (name find_someone) (planner (human (male (daniel))))
+            (object (human (female (mary)))))
+      (means sub-goal)
+      (plan (name snatch) (planner (human (male (daniel))))
+            (object (human (female (mary))))
+            (instrument (artifact (transportation (car)))))
+      (means sub-goal)
+      (goal (name help) (planner (group (law (police))))
+       (object (human (female (mary)))))
+      (means sub-goal)
+
+
+causes : 
+  or
+    and
+      (do (actor 
+           (human (male (daniel)))))
+effects: 
+  or
+    and
+      (ptrans (actor (human (male (daniel))))
+              (object (artifact (transportation (car))))
+              (tense (simple (past))) (to (artifact (dwelling (house))))
+              (time (at time-5)))
+      (means agency)
+      (propel (actor (human (male (daniel))))
+              (object (human (female (mary)))) (tense (simple (past)))
+              (to (artifact (transportation (car)))) (time (at time-2)))
+      (means agency)
+      (propel (actor (human (male (daniel))))
+              (object (human (female (mary)))) (state (intensity (val (8))))
+              (tense (simple (past))) (to (artifact (transportation (car))))
+              (time (at time-4)))
+      (means agency)
+
+
+causes : 
+  or
+    and
+      (do (actor 
+           (group (law (police)))))
+effects: 
+  or
+    and
+      (ptrans (actor (group (law (police)))) (tense (simple (past)))
+              (co_agent (group (health (medicine))))
+              (to (artifact (dwelling (house)))) (time (at time-8)))
+      (means agency)
+
+
+Regressive causation  : 
+-----------------------
+
+
+causes : 
+  or
+    and
+      (plan (name allow) (planner (human (male (daniel))))
+            (object (human (female (mary))))
+            (objective
+             (attend (from (human (female (mary))))
+              (actor (group (family (parents))))))
+            (tense (simple (past))) (time (at time-7)))
+      (means plan-part)
+effects: 
+  or
+    and
+      (plan (name know_event) (planner (group (family (parents))))
+            (objective
+             (attend (from (human (female (mary))))
+              (actor (group (family (parents)))))))
+
+
+causes : 
+  or
+    and
+      (is (actor (human (male (daniel))))
+       (state (belief
+               (grasp (actor (human (female (mary))))
+                      (object (group (family (child))))))))
+      (means domain)
+effects: 
+  or
+    and
+      (goal (name abduct) (planner (human (male (daniel))))
+       (object (human (female (mary)))))
+
+
+causes : 
+  or
+    and
+      (plan (name find_someone) (planner (human (male (daniel))))
+            (object (human (female (mary)))))
+      (means consequence)
+effects: 
+  or
+    and
+      (attend (actor (human (male (daniel))))
+       (object (human (male (daniel)))) (to (human (female (mary))))
+       (tense (simple (past))) (time (after (action (earning (work))))))
+
+
+causes : 
+  or
+    and
+      (plan (name force_into) (planner (human (male (daniel))))
+            (object (human (female (mary))))
+            (to (artifact (transportation (car)))))
+      (means plan-part)
+effects: 
+  or
+    and
+      (plan (name drive_away) (planner (human (male (daniel))))
+            (object (artifact (transportation (car))))
+            (to (artifact (dwelling (house)))))
+
+
+causes : 
+  or
+    and
+      (plan (name not_agree) (planner (human (female (mary))))
+            (object (human (male (daniel)))))
+      (means consequence)
+      (plan (name force_into) (planner (human (male (daniel))))
+            (object (human (female (mary))))
+            (to (artifact (transportation (car)))))
+      (means consequence)
+effects: 
+  or
+    and
+      (propel (actor (human (male (daniel)))) (cause (human (male (daniel))))
+              (object (human (female (mary)))) (tense (simple (past)))
+              (to (artifact (transportation (car)))) (time (at time-2)))
+
+
+causes : 
+  or
+    and
+      (plan (name not_agree) (planner (human (female (mary))))
+            (object (human (male (daniel)))))
+      (means consequence)
+effects: 
+  or
+    and
+      (mtrans (actor (human (female (mary))))
+              (object (human (male (daniel)))) (state (mood (val (-10))))
+              (time (at time-3)))
+
+
+causes : 
+  or
+    and
+      (plan (name not_agree) (planner (human (female (mary))))
+            (object (human (male (daniel)))))
+      (means consequence)
+      (plan (name force_into) (planner (human (male (daniel))))
+            (object (human (female (mary))))
+            (to (artifact (transportation (car)))))
+      (means consequence)
+effects: 
+  or
+    and
+      (propel (actor (human (male (daniel)))) (cause (human (male (daniel))))
+              (object (human (female (mary)))) (state (intensity (val (8))))
+              (tense (simple (past))) (to (artifact (transportation (car))))
+              (time (at time-4)))
+
+
+causes : 
+  or
+    and
+      (plan (name drive_away) (planner (human (male (daniel))))
+            (object (artifact (transportation (car))))
+            (to (artifact (dwelling (house)))))
+      (means consequence)
+effects: 
+  or
+    and
+      (ptrans (actor (human (male (daniel)))) (cause (human (male (daniel))))
+              (object (artifact (transportation (car))))
+              (tense (simple (past))) (to (artifact (dwelling (house))))
+              (time (at time-5)))
+
+
+causes : 
+  or
+    and
+      (plan (name go_in_group) (planner (group (law (police))))
+            (object (group (health (medicine))))
+            (location (artifact (dwelling (house)))))
+      (means consequence)
+effects: 
+  or
+    and
+      (ptrans (actor (group (law (police)))) (cause (group (law (police))))
+              (tense (simple (past))) (co_agent (group (health (medicine))))
+              (to (artifact (dwelling (house)))) (time (at time-8)))
+
+
+causes : 
+  or
+    and
+      (plan (name arrest) (planner (group (law (police))))
+            (object (human (male (daniel)))))
+      (means consequence)
+effects: 
+  or
+    and
+      (ptrans (actor (group (law (police)))) (object (human (male (daniel))))
+              (to (artifact (law_enforcement (jail)))) (time (at time-12)))
+
+
+causes : 
+  or
+    and
+      (plan (name snatch) (planner (human (male (daniel))))
+            (object (human (female (mary))))
+            (instrument (artifact (transportation (car)))))
+      (means plan-part)
+      (plan (name threat) (planner (human (male (daniel))))
+            (object (human (female (mary))))
+            (state (do (actor 
+                        (human (female (mary))))
+                       (to (action (be_free (escape))))))
+            (objective
+             (propel (object (human (female (mary))))
+                     (state (health (val (-10))))))
+            (time (at time-6)))
+      (means plan-part)
+      (plan (name force_into) (planner (human (male (daniel))))
+            (object (human (female (mary))))
+            (to (artifact (transportation (car)))))
+      (means plan-part)
+effects: 
+  or
+    and
+      (plan (name not_agree) (planner (human (female (mary))))
+            (object (human (male (daniel)))))
+
+
+causes : 
+  or
+    and
+      (goal (name abduct) (planner (human (male (daniel))))
+       (object (human (female (mary)))))
+      (means sub-goal)
+      (plan (name find_opport) (planner (human (male (daniel))))
+            (object (human (female (mary)))))
+      (means sub-goal)
+effects: 
+  or
+    and
+      (plan (name find_someone) (planner (human (male (daniel))))
+            (object (human (female (mary)))))
+
+
+causes : 
+  or
+    and
+      (goal (name abduct) (planner (human (male (daniel))))
+       (object (human (female (mary)))))
+      (means sub-goal)
+      (plan (name force_into) (planner (human (male (daniel))))
+            (object (human (female (mary))))
+            (to (artifact (transportation (car)))))
+      (means plan-part)
+effects: 
+  or
+    and
+      (plan (name snatch) (planner (human (male (daniel))))
+            (object (human (female (mary))))
+            (instrument (artifact (transportation (car)))))
+
+
+causes : 
+  or
+    and
+      (goal (name abduct) (planner (human (male (daniel))))
+       (object (human (female (mary)))))
+      (means sub-goal)
+      (plan (name threat) (planner (human (male (daniel))))
+            (object (human (female (mary))))
+            (state (do (actor 
+                        (human (female (mary))))
+                       (to (action (be_free (escape))))))
+            (objective
+             (propel (object (human (female (mary))))
+                     (state (health (val (-10))))))
+            (time (at time-6)))
+      (means plan-part)
+      (plan (name arrest) (planner (group (law (police))))
+            (object (human (male (daniel)))))
+      (means plan-part)
+      (plan (name snatch) (planner (human (male (daniel))))
+            (object (human (female (mary))))
+            (instrument (artifact (transportation (car)))))
+      (means plan-part)
+effects: 
+  or
+    and
+      (goal (name help) (planner (group (law (police))))
+       (object (human (female (mary)))))
+
+
+causes : 
+  or
+    and
+      (goal (name abduct) (planner (human (male (daniel))))
+       (object (human (female (mary)))))
+      (means sub-goal)
+effects: 
+  or
+    and
+      (plan (name find_opport) (planner (human (male (daniel))))
+            (object (human (female (mary)))))
+
+
+causes : 
+  or
+    and
+      (do (actor 
+           (human (male (daniel)))))
+      (means agency)
+effects: 
+  or
+    and
+      (propel (actor (human (male (daniel))))
+              (object (human (female (mary)))) (tense (simple (past)))
+              (to (artifact (transportation (car)))) (time (at time-2)))
+
+
+causes : 
+  or
+    and
+      (do (actor 
+           (human (male (daniel)))))
+      (means agency)
+effects: 
+  or
+    and
+      (propel (actor (human (male (daniel))))
+              (object (human (female (mary)))) (state (intensity (val (8))))
+              (tense (simple (past))) (to (artifact (transportation (car))))
+              (time (at time-4)))
+
+
+causes : 
+  or
+    and
+      (do (actor 
+           (human (male (daniel)))))
+      (means agency)
+effects: 
+  or
+    and
+      (ptrans (actor (human (male (daniel))))
+              (object (artifact (transportation (car))))
+              (tense (simple (past))) (to (artifact (dwelling (house))))
+              (time (at time-5)))
+
+
+causes : 
+  or
+    and
+      (do (actor 
+           (group (law (police)))))
+      (means agency)
+effects: 
+  or
+    and
+      (ptrans (actor (group (law (police)))) (tense (simple (past)))
+              (co_agent (group (health (medicine))))
+              (to (artifact (dwelling (house)))) (time (at time-8)))
+
+t
+Lisp>> 
+(dribble)

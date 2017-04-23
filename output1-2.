@@ -1,0 +1,137 @@
+Dribbling to SYS$SYSDEVICE:[UD.GCSS.BOZSAHIN.DISSERTATION]OUTPUT1-2.;2
+
+nil
+Lisp>> 
+(load 'nexus)
+
+Loading NEXUS ... 
+
+Welcome to NEXUS, a program for learning causal relations.
+Design and development: H. Cem Bozsahin   1989-1990
+                        Artificial Intelligence Laboratory
+                        Computer Science Department
+                        Arizona State University, Tempe AZ.
+Usage: (nexus <sentence list>)
+Ready.
+t
+Lisp>> 
+(setq input (rloff 'ep1.dat))
+((jack and sue lived in townville) (jack had been married to ann before)
+ (she and lisa drove to townville in august-1979)
+ (they waited until jack left) (ann waited in the car)
+ (lisa knocked the door) (she wanted to see if sue was at home)
+ (ann had told lisa that she wanted to get jack return to her)
+ (sue opened the door) (ann threw sue into the car) (she screamed)
+ (ann drove the car away) (the neighbors heard the scream)
+ (they called the police) (sue has been lost since))
+Lisp>> 
+()
+nil
+Lisp>> 
+(nexus input)
+
+Processing new episode ...
+
+    Parsing into semantic representation ...
+
+    Goal/plan detection in progress ...
+
+  Semantic Analysis of the episode completed ...
+
+  Relating new episode to LTM ...
+
+    Related to no episodes.
+
+  Trying to find a relevant hypothesis ...
+
+    None found. Generating one from new episode ...
+
+      Enter episode name : 
+"Ann, Lisa, Jack, and Sue"
+
+      Constructing a hypothesis for the new episode ...
+
+      Enter hypothesis name : 
+"Ann/Lisa vs Sue"
+
+    Hypothesis generation completed ...
+
+
+  Save session ? 
+
+Please respond with YES or NO.
+yes
+
+  Episodic and Procedural LTM updated.
+
+
+NEXUS run completed ...
+
+nil
+Lisp>> (wlotf *current_hypo* 'ep1.hyp)
+nil
+Lisp>> 
+(wlotf *working_memory* 'ep1.wm)
+nil
+Lisp>> 
+(setq input (rloff 'ep2.dat))
+((daniel and mary had been divorced)
+ (daniel saw her in the parking lot after work) (he forced her into the car)
+ (she refused him) (he kicked her into the car)
+ (he drove the car to his house)
+ (he threatened to kill her if she tried to escape)
+ (he let her call the parents)
+ (the police and the ambulance came to the house)
+ (he told the police that she took the children away)
+ (mary told daniel that she will stay with him) (he let her go)
+ (the police arrested him))
+Lisp>> 
+()
+nil
+Lisp>> 
+(nexus input)
+
+Processing new episode ...
+
+    Parsing into semantic representation ...
+
+    Goal/plan detection in progress ...
+
+  Semantic Analysis of the episode completed ...
+
+  Relating new episode to LTM ...
+
+    Related to ("Ann, Lisa, Jack, and Sue") episodes.
+
+  Trying to find a relevant hypothesis ...
+
+    This episode can be explained by Ann/Lisa vs Sue hypothesis.
+    Augmenting ...
+
+      Enter episode name : 
+"Daniel and Mary"
+
+      Constructing a hypothesis for the new episode ...
+
+      Enter hypothesis name : 
+"Daniel vs Mary"
+
+    Hypothesis generation completed ...
+
+  Combining hypotheses "Ann/Lisa vs Sue" and "Daniel vs Mary" ...
+
+      Enter hypothesis name : 
+"kidnapping"
+
+  Save session ? 
+
+Please respond with YES or NO.
+yes
+
+  Episodic and Procedural LTM updated.
+
+
+NEXUS run completed ...
+
+nil
+Lisp>> (dribble)

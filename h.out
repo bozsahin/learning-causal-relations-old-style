@@ -1,0 +1,144 @@
+
+(#S(causal_heuristic :name "domain 3"
+                     :precondition (and (equal (cd_event_type x) 'theme)
+                                        (equal (cd_event_type y) 'theme)
+                                        (equal
+                                         (filler_role 'name x)
+                                         'kidnap_for_ransom)
+                                        (equal (filler_role 'name y) 'abduct))
+                     :applicability (and (requal
+                                          (filler_role 'planner x)
+                                          (filler_role 'planner y))
+                                         (requal
+                                          (filler_role 'object x)
+                                          (filler_role 'object y)))
+                     :body (and (not (ask_money (filler_role 'planner x)
+                                                (scratch_pad-event_list
+                                                 *working_memory*)))
+                                (assert_c (negative_cause x y)))
+                     :utility 0)
+ #S(causal_heuristic :name "domain 2"
+                     :precondition (and (equal (header_cd x) 'mtrans)
+                                        (equal (cd_event_type y) 'theme)
+                                        (equal (filler_role 'name y) 'abduct)
+                                        (cd_event_type
+                                         (filler_role 'object x)))
+                     :applicability (and (requal
+                                          (filler_role 'actor x)
+                                          (filler_role 'planner y))
+                                         (requal
+                                          (filler_role
+                                           'actor
+                                           (filler_role 'object x))
+                                          (filler_role 'object y)))
+                     :body (assert_c (positive_cause (make_cd
+                                                      'is
+                                                      (list
+                                                       'actor
+                                                       (filler_role 'actor x))
+                                                      (list
+                                                       'state
+                                                       (list
+                                                        'belief
+                                                        (filler_role
+                                                         'object
+                                                         x))))
+                                                     y 'domain))
+                     :utility 0)
+ #S(causal_heuristic :name "domain 1"
+                     :precondition (and (equal (cd_event_type x) 'theme)
+                                        (equal (header_cd y) 'is)
+                                        (filler_role 'time y)
+                                        (equal (filler_role 'name x) 'abduct))
+                     :applicability (and (requal
+                                          (filler_role 'object x)
+                                          (filler_role 'actor y))
+                                         (or
+                                          (equal
+                                           (filler_role 'state y)
+                                           '(location (val (-10))))
+                                          (equal
+                                           (filler_role 'location y)
+                                           '(state (val (-10))))))
+                     :body (and (nothing_after (filler_role 'time y)
+                                               (scratch_pad-temporal_relations
+                                                *working_memory*))
+                                (assert_c (positive_cause x y 'domain))
+                                (assert_c (negative_cause y x)))
+                     :utility 0)
+ #S(causal_heuristic :name "plan-based-causality"
+                     :precondition (and (subsume
+                                         '(human)
+                                         (filler_role 'actor y))
+                                        (filler_role 'name x)
+                                        (common_roles_p x y))
+                     :applicability (and (plan_cd x) (basic_cd y))
+                     :body (let ((relation (has_plan (filler_role 'name x) y)))
+                             (cond ((equal relation 'activate)
+                                    (assert_c (positive_cause y x relation))
+                                    (assert_c (negative_cause x y)))
+                                   ((equal relation 'consequence)
+                                    (assert_c (positive_cause x y relation))
+                                    (assert_c (negative_cause y x)))))
+                     :utility 0)
+ #S(causal_heuristic :name "goal-directed-causality"
+                     :precondition (and (filler_role 'name x)
+                                        (filler_role 'name y)
+                                        (common_roles_p x y))
+                     :applicability (and (goal_cd x) (plan_cd y))
+                     :body (let ((means (leads_to
+                                         (filler_role 'name y)
+                                         (filler_role 'name x))))
+                             (and means
+                                  (assert_c (positive_cause x y means))
+                                  (assert_c (negative_cause y x))))
+                     :utility 0)
+ #S(causal_heuristic :name "constant-conjunction"
+                     :precondition (and *current_hypo*
+                                        (earlier
+                                         (cadr (filler_role 'time x))
+                                         (cadr (filler_role 'time y))
+                                         (scratch_pad-temporal_relations
+                                          *working_memory*)))
+                     :applicability (and *e*
+                                         (basic_cd x)
+                                         (basic_cd y)
+                                         (not (equal (header_cd x) 'is)))
+                     :body (and (constant_conjunct x y *e*)
+                                (assert_c (positive_cause x y 'similarity))
+                                (assert_c (negative_cause y x)))
+                     :utility 0)
+ #S(causal_heuristic :name "spatial_causality"
+                     :precondition (and (filler_role 'location x)
+                                        (filler_role 'location y))
+                     :applicability (and (basic_cd x)
+                                         (basic_cd y)
+                                         (equal
+                                          (cd_event_type x)
+                                          (cd_event_type y)))
+                     :body (and (not_accessible (filler_role 'location y)
+                                                (filler_role 'location x))
+                                (assert_c (negative_cause x y)))
+                     :utility 0)
+ #S(causal_heuristic :name "temporal-precedence"
+                     :precondition (and (filler_role 'time x)
+                                        (filler_role 'time y))
+                     :applicability (and (basic_cd x) (basic_cd y))
+                     :body (and (earlier (cadr (filler_role 'time y))
+                                         (cadr (filler_role 'time x))
+                                         (scratch_pad-temporal_relations
+                                          *working_memory*))
+                                (assert_c (negative_cause x y)))
+                     :utility 0)
+ #S(causal_heuristic :name "irreflexivity"
+                     :precondition (and (basic_cd x) (basic_cd y))
+                     :applicability (equal (header_cd x) (header_cd y))
+                     :body (and (equal (filler_role 'actor x)
+                                       (filler_role 'actor y))
+                                (equal (filler_role 'object x)
+                                       (filler_role 'object y))
+                                (equal (filler_role 'to x) (filler_role 'to y))
+                                (equal (filler_role 'from x)
+                                       (filler_role 'from y))
+                                (assert_c (negative_cause x y)))
+                     :utility 0))

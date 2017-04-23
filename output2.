@@ -1,0 +1,64 @@
+Dribbling to SYS$SYSDEVICE:[UD.GCSS.BOZSAHIN.DISSERTATION]OUTPUT2.;2
+
+nil
+Lisp>> 
+(init_memory)
+nil
+Lisp>> 
+(load_memory)
+t
+Lisp>> 
+(setq input_text_2 (rloff 'ep2.dat))
+((daniel and mary had been divorced)
+ (daniel saw her in the parking lot after work) (he forced her into the car)
+ (she refused him) (he kicked her into the car)
+ (he drove the car to his house)
+ (he threatened to kill her if she tried to escape)
+ (he let her call the parents)
+ (the police and the ambulance came to the house)
+ (he told the police that she took the children away)
+ (mary told daniel that she will stay with him) (he let her go)
+ (the police arrested him))
+Lisp>> 
+()
+nil
+Lisp>> 
+(nexus input_text_2)
+
+Processing new episode ...
+
+    Parsing into semantic representation ...
+
+    Goal/plan detection in progress ...
+
+  Semantic Analysis of the episode completed ...
+
+  Relating new episode to LTM ...
+
+    Related to no episodes.
+
+  Trying to find a relevant hypothesis ...
+
+    None found. Generating one from new episode ...
+
+      Enter episode name : 
+"Daniel and Mary"
+
+      Constructing a hypothesis for the new episode ...
+
+      Enter hypothesis name : 
+"Daniel vs Mary"
+
+    Hypothesis generation completed ...
+
+
+  Save session ? 
+
+Please respond with YES or NO.
+no
+
+
+NEXUS run completed ...
+
+nil
+Lisp>> (dribble)
